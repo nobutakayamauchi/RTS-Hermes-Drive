@@ -5,3 +5,5 @@ supported_triggers:
   - scheduled
 result_handoff:
   - execution_record
+supports_skills:
+  - weekly_dev_report
