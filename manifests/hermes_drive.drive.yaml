@@ -7,4 +7,5 @@ result_handoff:
   - execution_record
 supports_skills:
   - weekly_dev_report
+  - issue_to_fix_pr
 execution_mode: scheduled_or_manual
