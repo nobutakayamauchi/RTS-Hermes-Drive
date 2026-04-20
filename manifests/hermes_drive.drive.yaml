@@ -1,0 +1,7 @@
+drive_id: hermes_drive
+purpose: run RTS Skills through a Hermes-oriented orchestration layer
+supported_triggers:
+  - manual
+  - scheduled
+result_handoff:
+  - execution_record
