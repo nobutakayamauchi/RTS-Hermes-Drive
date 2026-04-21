@@ -6,10 +6,10 @@ This document is a concise structural linkage note for the current minimal cross
 ## Artifact Mapping
 - **`dev_pack.pack.yaml`**
   - `usage_scope: development_workflows`
-  - shared pack for `weekly_dev_report` and `issue_to_fix_pr`
+  - shared pack for `weekly_dev_report`, `issue_to_fix_pr`, and `failed_build_to_patch_plan`
 - **`hermes_drive.drive.yaml`**
   - `operation_scope: multi_skill_development_flow`
-  - shared drive for `weekly_dev_report` and `issue_to_fix_pr`
+  - shared drive for `weekly_dev_report`, `issue_to_fix_pr`, and `failed_build_to_patch_plan`
 - **`execution_record.schema.yaml`**
   - `record_scope: cross_repo_skill_execution`
   - shared execution record target
@@ -18,6 +18,7 @@ This document is a concise structural linkage note for the current minimal cross
 ```text
 hermes_drive -> weekly_dev_report -> dev_pack -> execution_record
 hermes_drive -> issue_to_fix_pr -> dev_pack -> execution_record
+hermes_drive -> failed_build_to_patch_plan -> dev_pack -> execution_record
 ```
 
 ## Boundary
