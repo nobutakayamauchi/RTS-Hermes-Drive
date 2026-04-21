@@ -8,6 +8,7 @@ result_handoff:
 supports_skills:
   - weekly_dev_report
   - issue_to_fix_pr
+  - failed_build_to_patch_plan
 execution_mode: scheduled_or_manual
 
 operation_scope: multi_skill_development_flow
