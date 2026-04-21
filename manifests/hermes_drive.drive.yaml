@@ -12,6 +12,7 @@ supports_skills:
   - sentry_error_to_root_cause_report
   - notion_knowledge_retrieval
   - slack_thread_summary
+  - important_mail_triage
 execution_mode: scheduled_or_manual
 
 operation_scope: multi_skill_operator_flow
