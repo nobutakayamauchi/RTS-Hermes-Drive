@@ -6,29 +6,31 @@ This document is a concise structural linkage note for the current minimal suppo
 ## Artifact Mapping
 - **`dev_pack.pack.yaml`**
   - `usage_scope: development_workflows`
-  - shared pack supporting:
+  - supports:
     - `weekly_dev_report.skill.yaml`
     - `issue_to_fix_pr.skill.yaml`
     - `failed_build_to_patch_plan.skill.yaml`
     - `sentry_error_to_root_cause_report.skill.yaml`
 - **`knowledge_pack.pack.yaml`**
   - `usage_scope: knowledge_retrieval`
-  - shared pack supporting:
+  - supports:
     - `notion_knowledge_retrieval.skill.yaml`
     - `slack_thread_summary.skill.yaml`
 - **`mail_pack.pack.yaml`**
   - `usage_scope: mail_triage`
-  - shared pack supporting:
+  - supports:
     - `important_mail_triage.skill.yaml`
 - **`revenue_pack.pack.yaml`**
   - `usage_scope: revenue_reporting`
-  - shared pack supporting:
+  - supports:
     - `monthly_revenue_summary.skill.yaml`
+    - `client_payment_status_report.skill.yaml`
 - **`hermes_drive.drive.yaml`**
   - `operation_scope: multi_skill_operator_flow`
-  - shared drive supporting all eight skills:
+  - supports all nine skills:
     - `weekly_dev_report.skill.yaml`
     - `monthly_revenue_summary.skill.yaml`
+    - `client_payment_status_report.skill.yaml`
     - `issue_to_fix_pr.skill.yaml`
     - `failed_build_to_patch_plan.skill.yaml`
     - `sentry_error_to_root_cause_report.skill.yaml`
@@ -37,12 +39,13 @@ This document is a concise structural linkage note for the current minimal suppo
     - `important_mail_triage.skill.yaml`
 - **`execution_record.schema.yaml`**
   - `record_scope: cross_repo_skill_execution`
-  - common execution record target for all eight flows
+  - common execution record target for all nine flows
 
 ## Minimal Supported Flows
 ```text
 hermes_drive -> weekly_dev_report -> dev_pack -> execution_record
 hermes_drive -> monthly_revenue_summary -> revenue_pack -> execution_record
+hermes_drive -> client_payment_status_report -> revenue_pack -> execution_record
 hermes_drive -> issue_to_fix_pr -> dev_pack -> execution_record
 hermes_drive -> failed_build_to_patch_plan -> dev_pack -> execution_record
 hermes_drive -> sentry_error_to_root_cause_report -> dev_pack -> execution_record

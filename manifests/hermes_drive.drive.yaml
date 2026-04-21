@@ -8,6 +8,7 @@ result_handoff:
 supports_skills:
   - weekly_dev_report
   - monthly_revenue_summary
+  - client_payment_status_report
   - issue_to_fix_pr
   - failed_build_to_patch_plan
   - sentry_error_to_root_cause_report
