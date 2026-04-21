@@ -25,9 +25,13 @@ This document is a concise structural linkage note for the current minimal suppo
   - supports:
     - `monthly_revenue_summary.skill.yaml`
     - `client_payment_status_report.skill.yaml`
+- **`research_pack.pack.yaml`**
+  - `usage_scope: research_monitoring`
+  - supports:
+    - `site_price_watch_with_screenshot.skill.yaml`
 - **`hermes_drive.drive.yaml`**
   - `operation_scope: multi_skill_operator_flow`
-  - supports all nine skills:
+  - supports all ten skills:
     - `weekly_dev_report.skill.yaml`
     - `monthly_revenue_summary.skill.yaml`
     - `client_payment_status_report.skill.yaml`
@@ -37,9 +41,10 @@ This document is a concise structural linkage note for the current minimal suppo
     - `notion_knowledge_retrieval.skill.yaml`
     - `slack_thread_summary.skill.yaml`
     - `important_mail_triage.skill.yaml`
+    - `site_price_watch_with_screenshot.skill.yaml`
 - **`execution_record.schema.yaml`**
   - `record_scope: cross_repo_skill_execution`
-  - common execution record target for all nine flows
+  - common execution record target for all ten flows
 
 ## Minimal Supported Flows
 ```text
@@ -52,6 +57,7 @@ hermes_drive -> sentry_error_to_root_cause_report -> dev_pack -> execution_recor
 hermes_drive -> notion_knowledge_retrieval -> knowledge_pack -> execution_record
 hermes_drive -> slack_thread_summary -> knowledge_pack -> execution_record
 hermes_drive -> important_mail_triage -> mail_pack -> execution_record
+hermes_drive -> site_price_watch_with_screenshot -> research_pack -> execution_record
 ```
 
 ## Boundary

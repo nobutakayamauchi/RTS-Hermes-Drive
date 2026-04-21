@@ -15,6 +15,7 @@ supports_skills:
   - notion_knowledge_retrieval
   - slack_thread_summary
   - important_mail_triage
+  - site_price_watch_with_screenshot
 execution_mode: scheduled_or_manual
 
 operation_scope: multi_skill_operator_flow
