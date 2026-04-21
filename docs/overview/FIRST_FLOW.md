@@ -1,20 +1,18 @@
-# First Minimal Cross-Repo Flows
+# FIRST_FLOW: Minimal Cross-Repo Structural Flows
 
 ## Purpose
-This note defines the current minimal structural end-to-end flows across RTS artifacts, without runtime implementation details.
+This document is a concise structural linkage note for the current minimal cross-repo flow. It is not a runtime implementation design.
 
 ## Artifact Mapping
-- **Skill artifacts**
-  - `weekly_dev_report.skill.yaml`
-  - `issue_to_fix_pr.skill.yaml`
-- **Shared pack artifact**
-  - `dev_pack.pack.yaml`
-  - supports: `weekly_dev_report`, `issue_to_fix_pr`
-- **Shared drive artifact**
-  - `hermes_drive.drive.yaml`
-  - supports: `weekly_dev_report`, `issue_to_fix_pr`
-- **RTS record target**
-  - `execution_record.schema.yaml` (common record target)
+- **`dev_pack.pack.yaml`**
+  - `usage_scope: development_workflows`
+  - shared pack for `weekly_dev_report` and `issue_to_fix_pr`
+- **`hermes_drive.drive.yaml`**
+  - `operation_scope: multi_skill_development_flow`
+  - shared drive for `weekly_dev_report` and `issue_to_fix_pr`
+- **`execution_record.schema.yaml`**
+  - `record_scope: cross_repo_skill_execution`
+  - shared execution record target
 
 ## Minimal Supported Flows
 ```text
@@ -23,4 +21,4 @@ hermes_drive -> issue_to_fix_pr -> dev_pack -> execution_record
 ```
 
 ## Boundary
-This is **structural linkage only** for validating artifact compatibility and ordering, not full runtime execution logic.
+This note defines structural linkage and artifact ordering only; it does not define full runtime execution logic.
