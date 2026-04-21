@@ -15,6 +15,7 @@ This document is a concise structural linkage note for the current minimal suppo
   - `usage_scope: knowledge_retrieval`
   - shared pack supporting:
     - `notion_knowledge_retrieval.skill.yaml`
+    - `slack_thread_summary.skill.yaml`
 - **`hermes_drive.drive.yaml`**
   - `operation_scope: multi_skill_operator_flow`
   - shared drive supporting:
@@ -23,9 +24,10 @@ This document is a concise structural linkage note for the current minimal suppo
     - `failed_build_to_patch_plan.skill.yaml`
     - `sentry_error_to_root_cause_report.skill.yaml`
     - `notion_knowledge_retrieval.skill.yaml`
+    - `slack_thread_summary.skill.yaml`
 - **`execution_record.schema.yaml`**
   - `record_scope: cross_repo_skill_execution`
-  - common execution record target for all five flows
+  - common execution record target for all six flows
 
 ## Minimal Supported Flows
 ```text
@@ -34,6 +36,7 @@ hermes_drive -> issue_to_fix_pr -> dev_pack -> execution_record
 hermes_drive -> failed_build_to_patch_plan -> dev_pack -> execution_record
 hermes_drive -> sentry_error_to_root_cause_report -> dev_pack -> execution_record
 hermes_drive -> notion_knowledge_retrieval -> knowledge_pack -> execution_record
+hermes_drive -> slack_thread_summary -> knowledge_pack -> execution_record
 ```
 
 ## Boundary
