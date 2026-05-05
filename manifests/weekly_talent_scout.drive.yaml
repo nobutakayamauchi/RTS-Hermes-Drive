@@ -1,0 +1,16 @@
+drive_id: weekly_talent_scout
+purpose: connect weekly talent scouting trigger to skill and packs for RTS execution recording
+trigger:
+  type: scheduled
+  cadence: weekly
+skill:
+  id: github_repo_intake
+packs:
+  - github_scout_pack
+  - talent_registry_pack
+outputs_to_rts:
+  - execution_record
+runtime_notes:
+  - declaration_only
+  - thin_drive_layer
+  - no_canonical_registry_data_stored_here

@@ -1,0 +1,15 @@
+drive_id: weekly_signal_digest
+purpose: connect weekly signal digest trigger to skill and pack for RTS execution recording
+trigger:
+  type: scheduled
+  cadence: weekly
+skill:
+  id: weekly_signal_digest
+packs:
+  - signal_feed_pack
+outputs_to_rts:
+  - execution_record
+runtime_notes:
+  - declaration_only
+  - thin_drive_layer
+  - no_signal_registry_canonical_data_stored_here
