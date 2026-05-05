@@ -1,0 +1,16 @@
+drive_id: social_draft_review
+purpose: connect manual social draft review trigger to skill and packs with draft/review-only RTS output
+trigger:
+  type: manual
+skill:
+  id: social_post_draft_review
+packs:
+  - social_research_pack
+  - social_ops_pack
+outputs_to_rts:
+  - execution_record
+runtime_notes:
+  - declaration_only
+  - thin_drive_layer
+  - social_flow_limited_to_draft_and_review
+  - no_publish_or_sns_automation
