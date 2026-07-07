@@ -3,6 +3,14 @@
 ## Scope
 This file applies to the entire repository.
 
+## Required reading
+
+Before editing, read:
+
+1. `README.md`
+2. `docs/STATUS.md`
+3. `docs/NEXT.md`
+
 ## Purpose
 RTS-Hermes-Drive is a thin runtime / drive declaration layer in the RTS ecosystem.
 
@@ -17,6 +25,13 @@ RTS-Hermes-Drive is a thin runtime / drive declaration layer in the RTS ecosyste
 - Prefer declaration-only drive manifests.
 - Keep social workflow at draft/review stage; do not add publishing automation.
 
+## Inventory pass boundary
+- Treat the next pass as drive inventory and risk review, not runtime or publishing expansion.
+- Prefer adding or improving index, inventory, and boundary documentation before changing drive declarations.
+- Do not promote a drive to canonical status without a separate review decision.
+- If a drive implies publishing, autonomous external actions, or broad runtime behavior, mark it as `RISKY` in inventory documentation instead of expanding it immediately.
+- If a drive belongs in another repository, mark it as `MOVE` instead of moving it immediately.
+
 ## Drive manifest shape
 Use this minimal shape for new drive manifests:
 - drive_id
@@ -26,3 +41,7 @@ Use this minimal shape for new drive manifests:
 - packs
 - outputs_to_rts
 - runtime_notes
+
+## Validation
+- Check for broken local doc links when adding index or onboarding docs.
+- For documentation-only changes, report changed files and confirm that no runtime, publishing, external action, secret, registry, or canonical data implementation was added.
